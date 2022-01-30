@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "jsx": "react",
+    "baseUrl": "./",
+    "paths": {
+      "@config/*": ["src/config/*"],
+      "@dispatchers/*": ["src/dispatchers/*"],
+      "@lib/*": ["src/lib/*"],
+      "@styles/*": ["src/styles/*"]
+    }
+  },
+  "include": ["src", "src/dispatchers", "src/config", "src/lib", "src/styles"],
+  "exclude": ["node_modules", "build"]
+}
