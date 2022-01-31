@@ -1,0 +1,32 @@
+#root {
+  .header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    background-color: white;
+    .wrapper {
+      margin: 0 auto;
+      width: 1000px;
+      height: 53px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .logo {
+        width: 124px;
+        display: flex;
+        align-items: center;
+      }
+      .navigation {
+        .nav-wrapper {
+          display: grid;
+          grid-template-columns: repeat(2, 30px);
+          column-gap: 10px;
+          .nav {
+            display: flex;
+            align-items: center;
+          }
+        }
+      }
+    }
+  }
+}
