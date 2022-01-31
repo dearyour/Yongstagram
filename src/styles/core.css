@@ -33,4 +33,9 @@ img {
 .txt-bold {
   font-weight: 700;
 }
+
+input:focus,
+textarea:focus {
+  outline: none;
+}
 /*# sourceMappingURL=core.css.map */

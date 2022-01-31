@@ -1,5 +1,5 @@
 $class-101-gray: #e8e8e8;
-$class-101-gray100: #9D9D9F;
+$class-101-gray100: #9d9d9f;
 $class-101-gray200: #454545;
 $class-101-main: #373f50;
 $class-101-blue: #5085e8;
@@ -10,8 +10,7 @@ $class-101-black: #262626;
   margin: 0;
   padding: 0;
   color: black;
-  font-family: 'Nanum Gothic',
-    sans-serif;
+  font-family: 'Nanum Gothic', sans-serif;
 }
 
 html,
@@ -39,4 +38,11 @@ img {
 
 .txt-bold {
   font-weight: 700;
+}
+
+input,
+textarea {
+  &:focus {
+    outline: none;
+  }
 }
