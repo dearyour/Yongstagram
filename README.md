@@ -1,8 +1,8 @@
 # 기본적인 CSS 배치 정리 
 
-position :relative  자기자신기준 배치  (위치상 부모) 이거아래에 absolute 존재
-positon : absolute 부모기준 배치
-position: fixed; 브라우저 기준 배치 
+- position :relative  자기자신기준 배치  (위치상 부모) 이거아래에 absolute 존재
+- positon : absolute 부모기준 배치
+- position: fixed; 브라우저 기준 배치 
 
 display: flex;  div는 세로로쌓이는데 div가 flex하면 가로로쌓임 
 (일단 flex를 해줘야 justify-content와 align-items을 사용가능)
