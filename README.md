@@ -64,4 +64,5 @@ flex-shrink: 0;
 속성값이 0이면 flex container의 크기가 flex item의 크기보다 작아져도 flex item의 크기가 줄어들지 않고 원래 크기로 유지된다. 
 속성값이 1 이상이면 flex container의 크기가 flex item의 크기보다 작아질 때 flex item의 크기가 flex container의 크기에 맞추어 줄어든다.
 변화될 크기와 상관없이 크기값을 고정시키고 싶다면 flex-shrink:0 을 쓰자
+그리고 나머지 div 태그 에서 flex-shrink: 1; 지정해주면 나머지 공간을 다 차지하게 된다 
 ```
