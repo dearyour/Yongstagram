@@ -50,4 +50,6 @@ marigin: 0 auto;
 어떤 레이아웃이 아래로 묻힐 때 position 지정 후 
    position: relative;
    z-index: 2;
+단순 z-index만 사용했을때 비교할수가 없어서 적용 안됨 
+position 작성해줘야 한다
 ```
