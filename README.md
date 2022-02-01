@@ -22,7 +22,14 @@ align-content : flex-start; 세로(수직)기준으로 맨위에 놓는것
 align-content : center; 세로(수직)기준으로 가운데에 놓는것
 (flex-wrap 이 있야지만 동작함) align-content보단 items를 많이씀
 ```
-
+```
+   display: grid;
+   row-gap: 8px;
+   
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 1rem;
+```
 ```
 헤더에서 
 marigin: 0 auto;
