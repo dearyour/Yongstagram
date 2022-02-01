@@ -46,4 +46,8 @@ marigin: 0 auto;
   position: sticky;
   top: 84px;
 ```
-
+```
+어떤 레이아웃이 아래로 묻힐 때 position 지정 후 
+   position: relative;
+   z-index: 2;
+```
