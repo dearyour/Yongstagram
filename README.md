@@ -5,6 +5,15 @@
 - position: fixed; 브라우저 기준 배치 
 ```
 ```
+position : relative  부모 태그
+position : absolute; 자식 태그 
+        right: 8px;
+        left: 8px;
+        top: 8px;
+        bottom 8px;
+        해당 부분에서 원하는 px만큼 공백을 만든다
+```
+```
 - display: flex;  div는 세로로쌓이는데 div가 flex하면 가로로쌓임 
 - (일단 flex를 해줘야 justify-content와 align-items을 사용가능)
 
