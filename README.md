@@ -1,70 +1,27 @@
-# Getting Started with Create React App
+# 기본적인 CSS 배치 정리 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+position :relative  자기자신기준 배치  (위치상 부모) 이거아래에 absolute 존재
+positon : absolute 부모기준 배치
+position: fixed; 브라우저 기준 배치 
 
-## Available Scripts
+display: flex;  div는 세로로쌓이는데 div가 flex하면 가로로쌓임 
+(일단 flex를 해줘야 justify-content와 align-items을 사용가능)
 
-In the project directory, you can run:
+flex-wrap: wrap; 플렉스한 아이템 가로넓이 초과하면 아래로 줄바꿈
+ 
+플렉스를 해주면 이제 구후 속성인
+justify-content  :center 는  가로(수평)기준으로 가운데로 놓는것
+justify-content : flex-end  는  가로(수평)기준으로 오른쪽끝으로 놓는것
+justify-content: space-between; 가로기준 화면 양끝에 맞게 분배
+align-items: center;  세로(수직)기준으로 가운데에 놓는것
+align-items: flex-start; 세로(수직)기준으로 맨위에 놓는것
 
-### `yarn start`
+align-content : flex-start; 세로(수직)기준으로 맨위에 놓는것
+align-content : center; 세로(수직)기준으로 가운데에 놓는것
+(flex-wrap 이 있야지만 동작함) align-content보단 items를 많이씀
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+헤더에서 
+marigin: 0 auto;
+상하는 딱붙게 만들고 좌우 auto는 가로 중앙에 배치한다는 뜻이다.
+ 그리고 자연스럽게 좌우 여백은 균등하게 배분된다.
