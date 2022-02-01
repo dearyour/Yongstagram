@@ -24,8 +24,26 @@ align-content : center; 세로(수직)기준으로 가운데에 놓는것
 ```
 
 ```
+세로줄 간격 띄울 때
+   display: grid;
+   row-gap: 8px;
+
+배치 4개씩 반복시킬 때
+   display: grid;
+   grid-template-columns: repeat(4,1fr);
+   grid-gap: 1rem;
+```
+
+```
 헤더에서 
 marigin: 0 auto;
 상하는 딱붙게 만들고 좌우 auto는 가로 중앙에 배치한다는 뜻이다.
  그리고 자연스럽게 좌우 여백은 균등하게 배분된다.
 ```
+
+```
+스크롤이 내려가도 특정화면에 고정시킬때 사용 
+  position: sticky;
+  top: 84px;
+```
+
