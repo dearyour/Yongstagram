@@ -10,13 +10,13 @@ import Detail from './Detail/Detail';
 function App() {
   return (
     <Router>
-      <Header />
+      {/* <Header /> */}
       <Switch>
         <Route path="/" exact component={Login} />
         <Route path="/join" exact component={Join} />
         <Route path="/feed" exact component={MainFeed} />
       </Switch>
-      {true && <Detail />}
+      {/* {true && <Detail />} */}
     </Router>
   );
 }
