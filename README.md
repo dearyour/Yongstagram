@@ -53,3 +53,9 @@ marigin: 0 auto;
 단순 z-index만 사용했을때 비교할수가 없어서 적용 안됨 
 position 작성해줘야 한다
 ```
+```
+스크롤바 생성
+   height: 해당 부분의 높이 px;
+   overflow-y: scroll;
+   overflow-x: hidden;
+```
