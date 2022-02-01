@@ -26,9 +26,9 @@ align-content : center; 세로(수직)기준으로 가운데에 놓는것
    display: grid;
    row-gap: 8px;
    
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
-    grid-gap: 1rem;
+   display: grid;
+   grid-template-columns: repeat(4,1fr);
+   grid-gap: 1rem;
 ```
 ```
 헤더에서 
