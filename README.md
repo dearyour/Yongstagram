@@ -77,3 +77,9 @@ flex-shrink: 0;
 flex: 1; 
 지정해주면 나머지 공간을 다 차지하게 된다 
 ```
+
+---
+```
+firebase 서버실행 
+firebase emulators:start --only functions
+```
