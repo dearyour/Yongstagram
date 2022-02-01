@@ -1,4 +1,4 @@
-# 기본적인 CSS 배치 정리 
+# 필수적인 CSS 배치 정리 
 ```
 - position :relative  자기자신기준 배치  (위치상 부모) 이거아래에 absolute 존재
 - positon : absolute 부모기준 배치
