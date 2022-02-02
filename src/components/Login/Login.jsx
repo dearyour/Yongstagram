@@ -43,7 +43,7 @@ function Login() {
           console.log(err);
         });
     },
-    [email, password, history, dispatch]
+    [email, password, history]
   );
 
   // const __logout = useCallback(() => {

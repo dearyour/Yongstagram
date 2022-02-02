@@ -47,14 +47,14 @@ router.post('/user/new', (req, res, next) => {
 });
 
 router.post('/feed/new', (req, res, next) => {
-  const { feed, profile } = req.body;
+  const { feed, profile, timestamp } = req.body;
   const { uid } = profile;
 
   Fdatabase.ref('feed')
     .push({
       feed,
       profile,
-      timestamp: Date.now()
+      timestamp
     })
     .then((snapshot) => {
       const fid = 'snapshot.key'; //무작위 키가 만들어진 후 그 키를 반환
