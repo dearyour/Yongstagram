@@ -1,14 +1,18 @@
-import React, { useCallback, useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import './css/index.css';
+import { useSelector } from 'react-redux';
 
 function Join() {
+  const nicknames = useSelector((state) => state.config.service.nicknames);
   const [email, setEmail] = useState(undefined);
   const [password, setPassword] = useState(undefined);
   const [nickname, setNickname] = useState(undefined);
   const [isNicknameExist, setIsNicknameExist] = useState(false);
 
+  //닉네임들을 불러오는 useSelector를 작성
+
   const __createUser = useCallback(() => {
-    if (email && nickname && password && password.length >= 8) {
+    if (email && nickname && !isNicknameExist && password && password.length >= 8) {
       let url = '/user/new';
 
       fetch(url, {
@@ -26,8 +30,26 @@ function Join() {
         .catch((err) => console.log(err));
     } else {
       console.log('조건에 부합하지 않는 값이 있습니다');
+      alert('조건에 부합하지 않는 값이 있습니다');
     }
-  }, [email, password, nickname]);
+  }, [email, password, nickname, isNicknameExist]);
+  //useEffect로 닉네임이 중복되는지 안되는지 체크하기
+
+  const __checkNickname = useCallback(() => {
+    if (nicknames.indexOf(nickname) !== -1) {
+      //닉네임이 배열에 들어있으니까 존재하면 인덱스가 -1이 안나옴
+      // console.log('닉네임이 존재합니다');
+      setIsNicknameExist(true);
+    } else {
+      // console.log('닉네임이 존재하지 않습니다');
+      setIsNicknameExist(false);
+    }
+  }, [nicknames, nickname]);
+
+  useEffect(() => {
+    __checkNickname();
+    return () => {};
+  }, [__checkNickname]);
 
   return (
     <div className="join">
