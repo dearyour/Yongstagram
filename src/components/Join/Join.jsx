@@ -1,8 +1,11 @@
 import React, { useCallback, useEffect, useState } from 'react';
 import './css/index.css';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
+import { useHistory } from 'react-router-dom';
+import { __UPDATE_HEADER_STATE__ } from '@dispatchers/layouts';
 
 function Join() {
+  const dispatch = useDispatch();
   const nicknames = useSelector((state) => state.config.service.nicknames);
   const [email, setEmail] = useState(undefined);
   const [password, setPassword] = useState(undefined);
@@ -10,6 +13,8 @@ function Join() {
   const [isNicknameExist, setIsNicknameExist] = useState(false);
 
   //닉네임들을 불러오는 useSelector를 작성
+
+  const history = useHistory();
 
   const __createUser = useCallback(() => {
     if (email && nickname && !isNicknameExist && password && password.length >= 8) {
@@ -26,13 +31,14 @@ function Join() {
         .then((res) => res.json())
         .then(({ msg }) => {
           console.log(msg);
+          history.push('/');
         })
         .catch((err) => console.log(err));
     } else {
       console.log('조건에 부합하지 않는 값이 있습니다');
       alert('조건에 부합하지 않는 값이 있습니다');
     }
-  }, [email, password, nickname, isNicknameExist]);
+  }, [email, password, nickname, isNicknameExist, history]);
   //useEffect로 닉네임이 중복되는지 안되는지 체크하기
 
   const __checkNickname = useCallback(() => {
@@ -50,6 +56,13 @@ function Join() {
     __checkNickname();
     return () => {};
   }, [__checkNickname]);
+
+  useEffect(() => {
+    dispatch({
+      type: __UPDATE_HEADER_STATE__,
+      payload: false
+    });
+  }, [dispatch]);
 
   return (
     <div className="join">

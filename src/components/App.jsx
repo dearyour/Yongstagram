@@ -7,13 +7,15 @@ import MainFeed from './MainFeed/MainFeed';
 import Header from './Header/Header';
 import Detail from './Detail/Detail';
 import firebaseApp from '@config/firebaseApp';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { __NICKNAME_SERVICE_UPDATE__ } from '@dispatchers/config';
 
 const Fdatabase = firebaseApp.database();
 
 function App() {
   const dispatch = useDispatch();
+  const isHeaderOpen = useSelector((state) => state.layouts.isHeaderOpen);
+
   const __getNicknames = useCallback(() => {
     const nicknameRef = Fdatabase.ref('statics/nicknames');
 
@@ -45,13 +47,13 @@ function App() {
 
   return (
     <Router>
-      {/* <Header /> */}
+      {isHeaderOpen && <Header />}
       <Switch>
         <Route path="/" exact component={Login} />
         <Route path="/join" exact component={Join} />
         <Route path="/feed" exact component={MainFeed} />
       </Switch>
-      {/* {true && <Detail />} */}
+      {false && <Detail />}
     </Router>
   );
 }
