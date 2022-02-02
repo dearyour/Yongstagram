@@ -46,6 +46,38 @@ router.post('/user/new', (req, res, next) => {
     });
 });
 
+router.post('/feed/new', (req, res, next) => {
+  const { feed, profile } = req.body;
+  const { uid } = profile;
+
+  Fdatabase.ref('feed')
+    .push({
+      feed,
+      profile,
+      timestamp: Date.now()
+    })
+    .then((snapshot) => {
+      const fid = 'snapshot.key'; //무작위 키가 만들어진 후 그 키를 반환
+      Fdatabase.ref(`users/${uid}/feed`) //유저가 본인의 글을 가져올때 필요
+        .push({ fid: fid })
+        .then(() => {
+          res.status(200).json({
+            msg: '피드가 생성되었습니다.'
+          });
+        })
+        .catch((err) => {
+          res.status(400).json({
+            err
+          });
+        });
+    })
+    .catch((err) => {
+      res.status(400).json({
+        err
+      });
+    });
+});
+
 router.get('/helloworld', (req, res, next) => {
   //   const email = 'asd@asd.com';
   //   const password = '12345678';
