@@ -83,3 +83,15 @@ flex: 1;
 firebase 서버실행 
 firebase emulators:start --only functions
 ```
+
+vscode 확장 프로그램
+```
+Sass
+
+Live Sass Compiler
+컨트롤 +P  그다음 >  Live Sass : Watch Sass
+
+es7 React/Redux
+
+```
+
