@@ -95,3 +95,111 @@ es7 React/Redux
 
 ```
 
+```
+defaultProps = { } , 
+프롭스 기본 정의 ,  아무것도 전달못할때 undefined 에러 방지 
+
+text-align-ceter; 중심 
+
+
+프롭스내릴떄 정의부가 상층 소환부가 하층 
+<컴포넌트명 프롭스내리는 이름 ={ 해당 컴포넌트 변수값 }> 
+으로 정의 
+컴포넌트 { } 뒤에 값이 해당 컴포넌트 데이터이고 
+프롭스로 내려가는 이름은 컴포넌트 앞에 키 이름임 
+
+userState에서 setDate 는 java의 setter 함수와 같은 로직 
+data는 클래스에서 필드 변수임  
+
+useRef (레퍼런스 사용하게함 주로 input부분에서 사용)
+리액트 생애주기 useEffect
+시작 -> 상태변화(리랜더) -> 소멸
+Mount Update UnMount
+(초기화) (예외처리작업) (메모리정리)
+클래스형컴포넌트 사용하는것을 
+함수형 컴포넌트에서사용하는것을 ReactHooks라고 명명
+ ex) ()=> {} 화살표함수
+useState , useEffect, useRef
+
+클래스형컴포넌트의 문제점은 가독성이 좋지못하며
+중복사용하는 코드가 많아 전체적인 코드길이가 길어짐
+그래서 리액트훅을 사용한다.
+
+useEffect(()=>{
+	콜백함수
+}, []);  의존성배열 , 이배열 내에 들어있는 값이 변화하면 
+		콜백함수가 수행된다. 마운트 
+
+useEffect(()=>{
+	콜백함수
+}, [data]);  
+state의 data값이 변할때만 콜백함수가 실행된다.  업데이트
+
+
+언마운트는 어떻게 ?  
+useEffect(()=>{
+	콜백함수부분
+    return () =>{
+	// unmount 시점에 실행됨 
+   };
+}, []); 
+
+
+ 
+const usage = useMemo(() => { [
+
+return {변수1,변수2,변수3};
+}, [변화 할값] );
+
+
+const { 변수1,변수2,변수3} = usage;
+
+
+
+함수정의 reducer  = (state,액션종류(타입, 데이터) => {
+  switch(action.type) {
+   case 'INIT':{
+    return action.data   -----> 새로운 state
+   }
+
+   default:
+   return state;
+
+   }
+}
+
+
+
+함수호출 dispatch(함수 정의 종류 , 전달할 data)
+
+기본 export default 는 jsx한페이지당 하나의 값만 사용가능한데
+단순export는 여러개 사용가능하다
+그래서 기본 export default는 import 할때 단순히 써주지만
+단순 export 여러개는 { } 로 비구조화 할당을 해줘서 써줘야한다.
+
+
+justify-content : center; 
+해당 태그,클래스,아이디 기준으로 가로축 기준으로 가운데에 위치
+ 
+
+align-center : 세로축 기준으로 가운데에 둔다 . 
+
+min-height : 100vh;   현재 크기의 100% 를 최소 높이로 가지겟다 
+
+process.env.url     어떤경로에있든 절대경로로 url 지정
+
+리덕스 정리 
+
+이니셜스테이트가 스토어저장소 (리듀스폴더안)
+rootRuducer 에서 
+ 생성자(액션)에서 만든  dispatch(액션(인자))  컴포넌트에서 사옹된것에
+따라서 rootReducer에서 로직 처리 
+
+call 동기함수
+fork 비동기함수
+
+왠만하면 중간로직에서는 데이터 처리가 완료될때까지 기다리는
+call쓰는게 낫다 
+
+
+```
