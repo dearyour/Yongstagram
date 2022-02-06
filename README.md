@@ -42,7 +42,19 @@ align-content : center; 세로(수직)기준으로 가운데에 놓는것
    grid-template-columns: repeat(4,1fr);
    grid-gap: 1rem;
 ```
-
+```
+프로필이미지 사이즈맞게 자동정렬 
+.profile-image {
+                width: 40px;
+                height: 40px;
+                border-radius: 10px;
+                background-color: #edbaba;
+                margin-right: 12px;
+                background-position: center;
+                background-size: cover;
+                background-repeat: no-repeat;
+              }
+```
 ```
 헤더에서 
 marigin: 0 auto;
