@@ -215,3 +215,19 @@ call쓰는게 낫다
 
 
 ```
+```
+vscode 확장 프로그램
+```
+Sass
+
+Live Sass Compiler
+컨트롤 +P  그다음 >  Live Sass : Watch Sass
+
+es7 React/Redux
+
+```
+
+파이어베이스 서버키기 
+firebase emulators:start --only functions
+
+```
