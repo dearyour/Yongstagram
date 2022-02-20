@@ -44,10 +44,14 @@ $yong-blue: #5085e8;
         background-size: $yong-gray;
         flex-shrink: 0;
         border-radius: 15px 0 0 15px;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
       }
       .contents {
         display: flex;
         flex-direction: column;
+        width: 100%;
         .feed-content {
           padding: 21px;
           border-bottom: 1px solid $yong-gray;
@@ -61,6 +65,9 @@ $yong-blue: #5085e8;
               border-radius: 43px;
               background-color: $yong-gray;
               margin-right: 16px;
+              background-position: center;
+              background-size: cover;
+              background-repeat: no-repeat;
             }
             .feed-desc {
               .nickname {
@@ -129,6 +136,9 @@ $yong-blue: #5085e8;
                   border-radius: 33px;
                   background-color: $yong-gray;
                   margin-right: 16px;
+                  background-position: center;
+                  background-size: cover;
+                  background-repeat: no-repeat;
                 }
                 .feed-desc {
                   .nickname {
@@ -193,6 +203,9 @@ $yong-blue: #5085e8;
             background-color: $yong-gray;
             margin-right: 14px;
             flex-shrink: 0;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
           }
           .write-comment {
             flex: 1;
