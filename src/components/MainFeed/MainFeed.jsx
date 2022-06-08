@@ -121,11 +121,7 @@ function MainFeed() {
                 <div className="timestamp">8:15 pm, yesterday</div>
               </div>
             </div>
-            <div className="contents">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi soluta voluptate
-              aspernatur assumenda tenetur illum doloremque dolorum ipsa, libero explicabo nam earum
-              velit voluptatibus sunt in, illo laborum nostrum aliquid.
-            </div>
+            <div className="contents">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
             <div className="bottom">
               <div className="like">
                 <div className="asset">
@@ -155,9 +151,7 @@ function MainFeed() {
               </div>
             </div>
             <div className="contents">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi soluta voluptate
-              aspernatur assumenda tenetur illum doloremque dolorum ipsa, libero explicabo nam earum
-              velit voluptatibus sunt in, illo laborum nostrum aliquid.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
               <div className="image"></div>
             </div>
             <div className="bottom">
@@ -188,11 +182,7 @@ function MainFeed() {
                 <div className="timestamp">8:15 pm, yesterday</div>
               </div>
             </div>
-            <div className="contents">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi soluta voluptate
-              aspernatur assumenda tenetur illum doloremque dolorum ipsa, libero explicabo nam earum
-              velit voluptatibus sunt in, illo laborum nostrum aliquid.
-            </div>
+            <div className="contents">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
             <div className="bottom">
               <div className="like">
                 <div className="asset">
@@ -222,9 +212,7 @@ function MainFeed() {
               </div>
             </div>
             <div className="contents">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi soluta voluptate
-              aspernatur assumenda tenetur illum doloremque dolorum ipsa, libero explicabo nam earum
-              velit voluptatibus sunt in, illo laborum nostrum aliquid.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
               <div className="image"></div>
             </div>
             <div className="bottom">
